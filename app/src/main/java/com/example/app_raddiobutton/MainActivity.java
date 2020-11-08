@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         int num1_int = Integer.parseInt(num1_string);
         int num2_int = Integer.parseInt(num2_string);
 
-
         if(rb1.isChecked()== true){
             int suma = num1_int+num2_int;
             String resultado = String.valueOf(suma);
@@ -45,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
             int resta = num1_int - num2_int;
             String resultado = String.valueOf(resta);
             tv1.setText(resultado);
+        }else if(rb1.isChecked()==false&&rb2.isChecked()==false){
+            Toast.makeText(this, "Tienes que seleccionar una de las opciones", Toast.LENGTH_SHORT).show();
         }
 
     }
